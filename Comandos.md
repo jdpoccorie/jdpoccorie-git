@@ -226,3 +226,4 @@ Una vez solucionado el conflicto podremos hacer el **commit** como siempre
 * `git branch -M main` Renombramos nuestra rama *master* a *main*
 * `git push -u origin main` Realizamos la primera publicación de nuestro repositorio local al remoto
 * `git push` despues de la primera publicación podemos escribir solo este comando sin el origin para publicar nuestras confirmaciones locales
+* `git push origin --delete <nombre_rama>` Comando que nos permite eliminar una rama remota
