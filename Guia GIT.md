@@ -852,3 +852,11 @@ Un ejemplo para agregar un repositorio remoto de bitbucket sería:
 ```
 git remote add <name_bitbucket> https://JDiegoPoccoriE@bitbucket.org/jdpoccorie/jdpoccorie-git.git
 ```
+```
+$ git remote -v
+bitbucket       https://JDiegoPoccoriE@bitbucket.org/jdpoccorie/jdpoccorie-git.git (fetch)
+bitbucket       https://JDiegoPoccoriE@bitbucket.org/jdpoccorie/jdpoccorie-git.git (push)
+github  https://github.com/jdpoccorie/jdpoccorie-git.git (fetch)
+github  https://github.com/jdpoccorie/jdpoccorie-git.git (push)
+```
+
