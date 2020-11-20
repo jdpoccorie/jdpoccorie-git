@@ -223,6 +223,17 @@ Una vez solucionado el conflicto podremos hacer el **commit** como siempre
 
 * Creamos un nuevo repositorio en https://github.com/new
 * `git remote add origin https://github.com/jdpoccorie/repo.git` Agregamos un repositorio remoto a nuestro repositorio local 
+* `git remote --verbose` Nos muestra a que servidor remoto estoy conectado, nos muestra a que apunta origin(default).
+* `git remote add <nombre_apuntador> https://github.com/user/repo.git` Nos permite agregar un apuntador a un repositorio remoto, ademas podemos sobreescribir *origin* cambiando *nombre_apuntador*
+
+```
+$ git remote --verbose
+nombre_apuntador      https://github.com/jdpoccorie/jdpoccorie-git.git (fetch)
+nombre_apuntador      https://github.com/jdpoccorie/jdpoccorie-git.git (push)
+origin  https://github.com/cuscowebdev/jdpoccorie-git.git (fetch)
+origin  https://github.com/cuscowebdev/jdpoccorie-git.git (push)
+```
+
 * `git branch -M main` Renombramos nuestra rama *master* a *main*
 * `git push -u origin main` Realizamos la primera publicación de nuestro repositorio local al remoto
 * `git push` despues de la primera publicación podemos escribir solo este comando sin el origin para publicar nuestras confirmaciones locales
