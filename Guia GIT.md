@@ -901,4 +901,15 @@ ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDhKnrARDG3xKPKE7I2kE4kUShXa8k20BTFrZBg7hSF
 ```
 $ git remote add githubSSH git@github.com:jdpoccorie/jdpoccorie-git.git
 ```
-Esto nos permitira que ya no nos este pidiendo nuestro usuario y contraseña cada que enviemos un push
+Esto nos permitira que ya no nos este pidiendo nuestro usuario y contraseña cada que enviemos un push.
+6. Lo que sigue es activar el agente de SSH
+```
+$ eval "$(ssh-agent -s)"
+Agent pid 1113
+```
+7. Una vez que este corriendo nuestro agente en segundo plano, vamos a registrar nuestra llave SSH asi
+```
+$ ssh-add /c/llaves-ssh/github_rsa
+Identity added: /c/llaves-ssh/github_rsa (juandiego.poccori@gmail.com)
+```
+8. 
