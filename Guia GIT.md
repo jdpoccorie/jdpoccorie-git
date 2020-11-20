@@ -813,3 +813,24 @@ Un conflicto nos dice que dos ramas modificaron la misma linea
 * `git push origin <nombre_rama>` Publicar *nombre_rama* al repositorio origin
 
 
+### Pasos para aportar a otro repositorio
+
+1. Hacer un fork en GitHub
+2. Clonar el ropositorio desde la cuenta de github que hizo fork
+3. Crear una rama local.
+4. Realizar nuestros aportes en esa nueva rama local
+5. Confirmar los cambios realizados en local
+6. Hacer push de mis cambios `git push origin <nombre_rama>`, a veces aparece errores por el usuario global para solucionar este problema hacer lo siguiente:
+
+Escribir el comando
+```
+git config --global --edit
+```
+Agregar las siguientes líneas al final del archivo
+```
+[credential]
+  helper = osxkeychain
+  useHttpPath = true
+```
+7. Crear un pull request con la nueva rama de mi repositorio en GitHub
+8. Esperar a que el administrados acepte mis cambios(pull request)
