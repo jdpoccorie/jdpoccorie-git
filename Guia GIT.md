@@ -843,3 +843,12 @@ Agregar las siguientes líneas al final del archivo
 ![Sourcetree](./img/sourcetree.PNG)
 
 * Para descargar el .exe (https://product-downloads.atlassian.com/software/sourcetree/windows/ga/SourceTreeSetup-3.3.9.exe)
+
+## Bitbucket
+
+Podemos agregar diferentes repositorios remotos, ya sea github, bitbucket gitlab etc.
+
+Un ejemplo para agregar un repositorio remoto de bitbucket sería:
+```
+git remote add <name_bitbucket> https://JDiegoPoccoriE@bitbucket.org/jdpoccorie/jdpoccorie-git.git
+```
