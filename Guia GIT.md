@@ -917,3 +917,5 @@ Identity added: /c/llaves-ssh/github_rsa (juandiego.poccori@gmail.com)
 ```
 8. Finalmente ejecutamos `git push githubSSH main` y damos escribimos *yes*
 9. Desde ahora podemos hacer pull y push sin que Github nos este pidiendo nuestros datos
+
+Lo que tenemos que hacer para agregar nuestro SSH en Bitbucket y Gitlab es lo mismo para Github, nos dirigimos a los settings de nuestro perfil y nos dirigimos las las keys SSH y ahi agregamos el contenido de `cat /c/llaves-ssh/github_rsa.pub`
