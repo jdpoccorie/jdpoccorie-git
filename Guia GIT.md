@@ -835,3 +835,11 @@ Agregar las siguientes líneas al final del archivo
 ```
 7. Crear un pull request con la nueva rama de mi repositorio en GitHub
 8. Esperar a que el administrados acepte mis cambios(pull request)
+
+## Sourcetree
+
+(https://www.sourcetreeapp.com/)
+
+![Sourcetree](./img/sourcetree.PNG)
+
+* Para descargar el .exe (https://product-downloads.atlassian.com/software/sourcetree/windows/ga/SourceTreeSetup-3.3.9.exe)
