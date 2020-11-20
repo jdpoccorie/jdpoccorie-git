@@ -863,3 +863,38 @@ github  https://github.com/jdpoccorie/jdpoccorie-git.git (push)
 ### Varios repositorios remotos
 
 Podemos configurar un mismo proyecto para sincronizar varios repositorios remotos
+
+## Configuracion SSH - GitHub
+
+1. Creamos una carpeta en el dico C: `\llaves--ssh`
+2. En consola:
+```
+$ ssh-keygen -t rsa -C "juandiego.poccori@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/c/Users/JDiegoP/.ssh/id_rsa): /c/llaves-ssh/github_rsa
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /c/llaves-ssh/github_rsa
+Your public key has been saved in /c/llaves-ssh/github_rsa.pub
+The key fingerprint is:
+SHA256:cIeEzK72XnAG9Wo0XKZSZ4ekIr9ozRn1RyH9yJps8v juandiego.poccori@gmail.com
+The key's randomart image is:
++---[RSA 3072]----+
+|     o .+.Boo    |
+|      += X.o..   |
+|    ..= X o..o   |
+|     o.O = .o .  |
+|     .+ S..o.    |
+|    o+ Oo =.     |
+|   .o.= .*       |
+|   .  ..  E      |
++----[SHA256]-----+
+```
+Primero debemos escribir el comando `$ ssh-keygen -t rsa -C "juandiego.poccori@gmail.com"` y despues nos pedirá la ruta en este caso escribimos `/c/llaves-ssh/github_rsa` luego nos pedira mas datos pero no los ingresaremos asi que damos enter, Finalmente nos mostrará la key generada.
+3. Para mostrar la llave generada escribimos en consola
+```
+$ cat /c/llaves-ssh/github_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDhKnrARDG3xKPKE7I2kE4kUShXa8k20BTFrZBg7hSFxuVh18XnhAkOnmvQ0Z5luk9xMLkHYfF8f01TX9qK/6Gjac01oUajVBkFoJcCyTr2G1GWwcAtN/5lqeqms68JxE1vM7IqPNS/V2zk2rWr/RfoPsMKlO3fbhNur77E6xV0WOswTszsJHM1Uvqk+XSJPYEmDr9GF3zSWni+aGrj2Sk3augffQ8q2y+tPD3PahFvZBPbdPaKCaiPujwDl0W+hS9xjcm5SukY22Zug+RNjMG9Hv1UApMvlE3v0Yadiv+wY8u3RDcIGWsdq0nxI6AcP+tMP8ZlqYdlSfpyQRZI+syd15K4+3cd5v6ifFWqsDV/m4B8XfbhYKosTmJrcuH/ocr7XIuq8zFPP/c3r2OSyTz49d35ts+CiWeb/b8By9bHPcWt9520T9wmI9I8JcTNncE73yXDbODqfNVo/1d9YMVsqvGuTgsi3nM= juandiego.poccori@gmail.com
+```
+4. Nos dirigimos a nuestro perfil en GitHub (https://github.com/settings/keys) y en New SSH key pegamos nuestra llave, ademas podremos poner cualquier titulo para nuestra llave.
+5. 
