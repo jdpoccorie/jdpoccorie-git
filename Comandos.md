@@ -240,3 +240,4 @@ origin  https://github.com/cuscowebdev/jdpoccorie-git.git (push)
 * `git push origin --delete <nombre_rama>` Comando que nos permite eliminar una rama remota
 * `git fetch origin <nombre_rama>` Para actualizar mi repositorio local, si en caso nuestro repositorio remoto tenga cambios
 * `git merge origin/main` Para fusionar el main local con los cambios que llegaron con el **fetch**
+* `git pull <origin> <nombre_rama>` Es la unión de `git fetch origin <nombre_rama>` y de `git merge origin/main`
