@@ -897,4 +897,8 @@ $ cat /c/llaves-ssh/github_rsa.pub
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDhKnrARDG3xKPKE7I2kE4kUShXa8k20BTFrZBg7hSFxuVh18XnhAkOnmvQ0Z5luk9xMLkHYfF8f01TX9qK/6Gjac01oUajVBkFoJcCyTr2G1GWwcAtN/5lqeqms68JxE1vM7IqPNS/V2zk2rWr/RfoPsMKlO3fbhNur77E6xV0WOswTszsJHM1Uvqk+XSJPYEmDr9GF3zSWni+aGrj2Sk3augffQ8q2y+tPD3PahFvZBPbdPaKCaiPujwDl0W+hS9xjcm5SukY22Zug+RNjMG9Hv1UApMvlE3v0Yadiv+wY8u3RDcIGWsdq0nxI6AcP+tMP8ZlqYdlSfpyQRZI+syd15K4+3cd5v6ifFWqsDV/m4B8XfbhYKosTmJrcuH/ocr7XIuq8zFPP/c3r2OSyTz49d35ts+CiWeb/b8By9bHPcWt9520T9wmI9I8JcTNncE73yXDbODqfNVo/1d9YMVsqvGuTgsi3nM= juandiego.poccori@gmail.com
 ```
 4. Nos dirigimos a nuestro perfil en GitHub (https://github.com/settings/keys) y en New SSH key pegamos nuestra llave, ademas podremos poner cualquier titulo para nuestra llave.
-5. 
+5. Ahora vamos a nuestro repositorio local y agregaremos un repositorio remoto por medio de SSH
+```
+$ git remote add githubSSH git@github.com:jdpoccorie/jdpoccorie-git.git
+```
+Esto nos permitira que ya no nos este pidiendo nuestro usuario y contraseña cada que enviemos un push
