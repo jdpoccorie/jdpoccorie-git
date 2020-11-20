@@ -810,5 +810,6 @@ Un conflicto nos dice que dos ramas modificaron la misma linea
 * `git branch -M main` Renombramos nuestra rama *master* a *main*
 * `git push -u origin main` Realizamos la primera publicación de nuestro repositorio local al remoto
 * `git push` despues de la primera publicación podemos escribir solo este comando sin el origin para publicar nuestras confirmaciones locales
+* `git push origin <nombre_rama>` Publicar *nombre_rama* al repositorio origin
 
 
