@@ -803,4 +803,12 @@ Nos muestra las ramas que han sido fusionadas a la rama actual
 
 Un conflicto nos dice que dos ramas modificaron la misma linea 
 
+## GitHub
+
+* Creamos un nuevo repositorio en https://github.com/new
+* `git remote add origin https://github.com/jdpoccorie/repo.git` Agregamos un repositorio remoto a nuestro repositorio local 
+* `git branch -M main` Renombramos nuestra rama *master* a *main*
+* `git push -u origin main` Realizamos la primera publicación de nuestro repositorio local al remoto
+* `git push` despues de la primera publicación podemos escribir solo este comando sin el origin para publicar nuestras confirmaciones locales
+
 
