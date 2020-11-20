@@ -812,7 +812,7 @@ Un conflicto nos dice que dos ramas modificaron la misma linea
 * `git push` despues de la primera publicación podemos escribir solo este comando sin el origin para publicar nuestras confirmaciones locales
 * `git push origin <nombre_rama>` Publicar *nombre_rama* al repositorio origin
 * `git fetch origin <nombre_rama>` Para actualizar mi repositorio local, si en caso nuestro repositorio remoto tenga cambios
-
+* `git merge origin/main` Para fusionar el main local con los cambios que llegaron con el **fetch**
 
 ### Pasos para aportar a otro repositorio
 
