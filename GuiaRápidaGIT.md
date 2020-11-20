@@ -1,6 +1,6 @@
 # Curso de Git
 ### Introducción
-> Es un Sistema de control de versiones para el mantenimiento eficiente y confiable de nuestros trabajos o proyectos... :)
+> Es un Sistema de control de versiones para el mantenimiento eficiente y confiable de nuestros trabajos o proyectos... c:
 
 ## Parte I
 ### ¿Qué es?
@@ -288,7 +288,7 @@ Despues tendremos que copiar la direccion https en el mio salio [GitHub jspoccor
 
 ### Para cambiar el nombre de un commit
 1. git commit --amend
-2. Se nos abrira un archivo en el editor en el cual nos aparecera el nombre del ultimo commit :)
+2. Se nos abrira un archivo en el editor en el cual nos aparecera el nombre del ultimo commit c:
 3. Editamos el nombre del commit
 4. Listo!!!
 
@@ -300,7 +300,7 @@ commando para renombrar archivos
 
 1. ponemos en el shell git mv index.html pagina.html
 2. entramos en git status
-3. hacemos commit al al renamed :)
+3. hacemos commit al al renamed c:
 4. Listo se cambio los archivos...
 
 ### Regresar en el tiempo
@@ -311,7 +311,7 @@ commando para renombrar archivos
 1. Ponemos cualquiera de los anteriores para ver la lista de los commits
 2. escribir en el shell git checkout 2365ee5
 3. Nos damos cuenta de que nuestros archivos se actualizaron con los de esa vez en que creamos el commit, asi nosotros podemmos movernos a cualquier punto... Excelente!!
-4. Volvemos a master que en si nos regresara al HEAD :)
+4. Volvemos a master que en si nos regresara al HEAD c:
 
 
 ### Trabajar con Etiquetas
@@ -354,7 +354,7 @@ Al final terminaras con una sola confirmación - la segunda confirmacion reempla
 Si no hemos hecho cambios desde la ultima confirmacion entonces la instantanea (commit) lucira exactamente igual y lo unico que cambiaremos sera el mensaje del commit
 
 ### git commit -a -m "mensaje del commit" || git commit -am "mensaje del commit"
-Con este commando podemos saltar el area de preparacion osea que ya no ponemos el git add -A :)
+Con este commando podemos saltar el area de preparacion osea que ya no ponemos el git add -A c:
 
 ### Fusionar ramas
 ### git branch
