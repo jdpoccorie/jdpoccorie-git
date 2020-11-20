@@ -867,7 +867,7 @@ Podemos configurar un mismo proyecto para sincronizar varios repositorios remoto
 ## Configuracion SSH - GitHub
 
 1. Creamos una carpeta en el dico C: `\llaves--ssh`
-2. En consola:
+2. En consola, OJO: El correo debe de ser el mismo con el que nos registramos en Github,
 ```
 $ ssh-keygen -t rsa -C "juandiego.poccori@gmail.com"
 Generating public/private rsa key pair.
@@ -891,7 +891,10 @@ The key's randomart image is:
 +----[SHA256]-----+
 ```
 Primero debemos escribir el comando `$ ssh-keygen -t rsa -C "juandiego.poccori@gmail.com"` y despues nos pedirá la ruta en este caso escribimos `/c/llaves-ssh/github_rsa` luego nos pedira mas datos pero no los ingresaremos asi que damos enter, Finalmente nos mostrará la key generada.
-3. Para mostrar la llave generada escribimos en consola
+> Dejamos el passphrase vacio
+
+> Cuando nos pida la ruta escribimos */c/llaves-ssh/github_rsa*
+1. Para mostrar la llave generada escribimos en consola
 ```
 $ cat /c/llaves-ssh/github_rsa.pub
 ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQDhKnrARDG3xKPKE7I2kE4kUShXa8k20BTFrZBg7hSFxuVh18XnhAkOnmvQ0Z5luk9xMLkHYfF8f01TX9qK/6Gjac01oUajVBkFoJcCyTr2G1GWwcAtN/5lqeqms68JxE1vM7IqPNS/V2zk2rWr/RfoPsMKlO3fbhNur77E6xV0WOswTszsJHM1Uvqk+XSJPYEmDr9GF3zSWni+aGrj2Sk3augffQ8q2y+tPD3PahFvZBPbdPaKCaiPujwDl0W+hS9xjcm5SukY22Zug+RNjMG9Hv1UApMvlE3v0Yadiv+wY8u3RDcIGWsdq0nxI6AcP+tMP8ZlqYdlSfpyQRZI+syd15K4+3cd5v6ifFWqsDV/m4B8XfbhYKosTmJrcuH/ocr7XIuq8zFPP/c3r2OSyTz49d35ts+CiWeb/b8By9bHPcWt9520T9wmI9I8JcTNncE73yXDbODqfNVo/1d9YMVsqvGuTgsi3nM= juandiego.poccori@gmail.com
@@ -907,9 +910,10 @@ Esto nos permitira que ya no nos este pidiendo nuestro usuario y contraseña cad
 $ eval "$(ssh-agent -s)"
 Agent pid 1113
 ```
-7. Una vez que este corriendo nuestro agente en segundo plano, vamos a registrar nuestra llave SSH asi
+7. Una vez que este corriendo nuestro agente en segundo plano, vamos a registrar nuestra llave SSH en el agente
 ```
 $ ssh-add /c/llaves-ssh/github_rsa
 Identity added: /c/llaves-ssh/github_rsa (juandiego.poccori@gmail.com)
 ```
-8. 
+8. Finalmente ejecutamos `git push githubSSH main` y damos escribimos *yes*
+9. Desde ahora podemos hacer pull y push sin que Github nos este pidiendo nuestros datos
