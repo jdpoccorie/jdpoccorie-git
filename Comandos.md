@@ -172,6 +172,7 @@ Puede que te estés preguntando la diferencia entre autor (author) y confirmador
 * `git branch -b <nombre_rama>` Nos permite crear la rama y saltar a ella en un solo comando, nos ahorra el **git checkout**
 * `git checkout <nombre_rama>` Para cambiar la rama en donde estemos
 * `git branch -v` Nos muestra todas las ramas y su ultimo commit que se hizo en cada una de ellas
+* `git branch --all` Para ver todas las ramas incluidas las del repositorio remoto
 
 > Puedo crear todas las ramas que quiera o necesite no necesariamente estando en la rama master
 
@@ -217,3 +218,11 @@ CAMBIOS EN <nombre_rama>
 El archivo sera modificado por el both del repositorio de git y nosotros tendremos que solucionar el conflicto manualmente escogiendo que lineas salvar y que otras eliminar. VSCode nos ayuda bastante con esto, podemos modificar cualquier otra parte del documento.
 
 Una vez solucionado el conflicto podremos hacer el **commit** como siempre
+
+## GitHub
+
+* Creamos un nuevo repositorio en https://github.com/new
+* `git remote add origin https://github.com/jdpoccorie/repo.git` Agregamos un repositorio remoto a nuestro repositorio local 
+* `git branch -M main` Renombramos nuestra rama *master* a *main*
+* `git push -u origin main` Realizamos la primera publicación de nuestro repositorio local al remoto
+* `git push` despues de la primera publicación podemos escribir solo este comando sin el origin para publicar nuestros avances(confirmaciones)
