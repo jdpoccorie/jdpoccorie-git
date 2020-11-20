@@ -860,3 +860,6 @@ github  https://github.com/jdpoccorie/jdpoccorie-git.git (fetch)
 github  https://github.com/jdpoccorie/jdpoccorie-git.git (push)
 ```
 
+### Varios repositorios remotos
+
+Podemos configurar un mismo proyecto para sincronizar varios repositorios remotos
