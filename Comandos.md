@@ -2,7 +2,7 @@
 
 [Regresar](./README.md)
 
-### Flujo de trabajo básico en Git
+## Flujo de trabajo básico en Git
 
 1. Modificas
 2. Preparas
@@ -27,17 +27,19 @@ Por defecto los archivos de nuestra carpeta no estaran marcados o rastreados por
 
 ## Primeras configuraciones
 
-* `git config --global user.name "jdpoccorie"`
+* `git --version` Nos dice la versión instalada de Git
+* `git config --global user.name "JDiegoPoccoriE"`
 * `git config --global user.email "juandiego.poccori@gmail.com"`
 * `git config --global core.editor "'c:/program files/sublime text 2/sublime_text.exe' -w"`
 * `git config --global core.editor "'c:/program files/sublime text 3/subl.exe' -w"`
-* `git config --global --list` Listar mis condifuraciones
+* `git config --list` Nos muestra todas las configuraciones de git
+* `git config --global --list` Listar mis configuraciones
 * `git config user.name` Mostrar mi user.name
 
 ## Comandos para obtener ayuda
 
 * `git help <comando>`
-* `git <comando> --help`
+* `git <comando> --help` Nos brinda detalladamente la guía de uso _comando_
 * `man git-<comando>`
 
 ## Comandos usados para iniciar
@@ -52,6 +54,8 @@ Comandos que usaremos
 * `git commit` Hacer un commit escribiendo el mensaje en el editor configurado en git
 * `git log`
 * `git diff` Para ver los cambios en la zona de archivos no preparados
+* `git diff <file>` Para ver las diferencias actuales con las del repositorio del *file* que queremos
+* `git diff --stat <file>` Nos muestra una simple estadistica que nos indica con signos `+` y `-` el numero de lineas agregadas y eliminadas
 * `git diff --staged` Para ver los cambios en la zona de preparacion
 * `git reset HEAD Readme.md` Para quitar de la zona de preparación, tambien se puede usar `git restore --staged <file>`
 * `git commit --amend` Nos permite cambiar el mensaje del último commit que se hizo
@@ -136,6 +140,8 @@ Puede que te estés preguntando la diferencia entre autor (author) y confirmador
 * `git reset HEAD <file>` Para deshacer la preparación de un archivo
 * `git restore --staged <file>` Para deshacer la preparación de un archivo
 * `git checkout -- <file>` Nos permite deshacer los cambios que le hicimos al archivo
+* `git checkou <file>` Nos permite deshacer los cambios que le hicimos al archivo
+* `git checkout -f` Nos permite forzar para deshacer los cambios que hicimos a todos los archivos
 * `git restore <file>` Nos permite deshacer los cambios que le hicimos al archivo
 
 ## Etiquetas

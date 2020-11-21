@@ -36,7 +36,6 @@ Esto nos lleva a las tres secciones principales de un proyecto de Git:
 * el directorio de trabajo (working directory), y 
 * el área de preparación (staging area).
 
-
 ![Directorio de trabajo, área de preparación, y directorio de Git](./img/Estados.png)
 
 1. Working Directory | Directorio de Trabajo 
@@ -52,7 +51,20 @@ Esto nos lleva a las tres secciones principales de un proyecto de Git:
    * El directorio de Git es donde Git almacena los metadatos y la base de datos de objetos para tu proyecto. Es la parte más importante de Git, y es lo que se copia cuando clonas un repositorio desde otro ordenador.
    * Applicando un " commit " tenemos nuestro repositorio actualizado
 
-## Flujo de Trabajo
+### El ciclo de vida del estado de nuestros archivos
+
+* Untracked (No Rastreados | Sin seguimiento)
+* Unmodified
+* Modified
+* Stanged
+
+UNTRACKED | UNMODIFIED | MODIFIED | STAGED
+------------ | ------------- | ------------- | -------------
+Por defecto los archivos de nuestra carpeta no estaran marcados o rastreados por asi decirlo. | Una vez pasados por Untracked estos archivos estaran como no modificados, al estar asi nosotros no podremos enviarlos al staged area. | Nuestros archivos al ser editados pasan a modified. | Haciendo un stage the file pasan a staged area.
+
+![Ciclo de vida de los estados en Git](./img/cicloVida.png)
+
+### Flujo de Trabajo
 
 1. Modificas una serie de archivos en tu directorio de trabajo.
 2. Preparas los archivos, añadiendo instantáneas de ellos a tu área de preparación
@@ -60,17 +72,9 @@ Esto nos lleva a las tres secciones principales de un proyecto de Git:
 
 > Si una versión concreta de un archivo está en el directorio de Git, se considera confirmada (committed). Si ha sufrido cambios desde que se obtuvo del repositorio, pero ha sido añadida al área de preparación, está preparada (staged). Y si ha sufrido cambios desde que se obtuvo del repositorio, pero no se ha preparado, está modificada (modified).
 
-# Instalación y Configuración de Git
+### Configuración
 
-## Instalación
-
-Video (https://youtu.be/ES2xtLyI-B8)
-
-1. Para descargar git (https://git-scm.com/downloads) 
-
-#### Configuración
-
-1. Accedemos a nuestra terminal git-bash para editar nuestra identidad, editor de texto y más usamos el comando `git config`
+1. Accedemos a nuestra terminal para editar nuestra identidad, editor de texto y más. Usaremos el comando `git config`
 * Configuramos el **nombre de usuario**
 ```
 git config --global user.name "jdpoccorie"
@@ -94,7 +98,9 @@ git config user.name
 ```
 * Listo!!!
 
-## Comandos para obtener ayuda
+> Podemos configurar estas opciones para algun repositorio en particular, incluso para usuarios separados *Ver Guía*
+
+### Comandos para obtener ayuda
 
 Si alguna vez necesitas ayuda usando Git, hay tres formas de ver la página del manual (manpage) para cualquier comando de Git:
 ```
@@ -108,63 +114,21 @@ git help config
 ```
 > Podemos ver la info de los comandos incluso sin conexión
 
-# Creando nuestro primer Repositorio
+## Creando nuestro primer Repositorio
 
-Un **repositorio** es un lugar de almacenamiento del cual pueden ser recuperados e instalados los paquetes de software en un ordenador.
-
-## El ciclo de vida del estado de nuestros archivos
-* Untracked (No Rastreados | Sin seguimiento)
-* Unmodified
-* Modified
-* Stanged
-
-UNTRACKED | UNMODIFIED | MODIFIED | STAGED
------------- | ------------- | ------------- | -------------
-Por defecto los archivos de nuestra carpeta no estaran marcados o rastreados por asi decirlo. | Una vez pasados por Untracked estos archivos estaran como no modificados, al estar asi nosotros no podremos enviarlos al staged area. | Nuestros archivos al ser editados pasan a modified. | Haciendo un stage the file pasan a staged area.
-
-![Ciclo de vida de los estados en Git](./img/cicloVida.png)
-
-1. Al estar en el **staged area**.
-   1. Hacemos un commit y estos archivos se registraran pasando al repositorio a estar como archivos unmodified(no modificados) de una nueva version 
-   2. Finalmente si nosotros queremos dejar de ver algunos archivos podemos eliminarlos de nuestro repositorio y pasar nuevamente a estar no marcados untracked...
-2. Tambien veremos un comando `status` que nos permitira saber el estado de nuestros archivos.
-
-**Inicializando un repositorio en un directorio existente**
-
-Si estás empezando el seguimiento en Git de un proyecto existente, necesitas ir al directorio del proyecto y escribir:
+Para iniciar nuestro repositorio necesitas ir al directorio del proyecto y escribir:
 ```
 git init
 ```
-Esto crea un nuevo subdirectorio llamado .git que contiene todos los archivos necesarios del repositorio — un esqueleto de un repositorio Git.
+* Esto crea un nuevo subdirectorio llamado **_.git_** que contiene todos los archivos necesarios del repositorio
 
-**Clonando un repositorio existente**
-
-Si deseas obtener una copia de un repositorio Git existente — por ejemplo, un proyecto en el que te gustaría contribuir — el comando que necesitas es `git clone [url]`
-
-```
-git clone git://github.com/schacon/grit.git
-```
-
-**Práctica**
-
-Comandos que usaremos
-* `git init`
-* `git status`
-* `git add [archivo]`
-* `git add .` agrega todos los archivos a la zona de preparacion esten o no en dicha zona
-* `git add -A` agrega todos los archivos que ya estamos siguiendo
-* `git commit -m "mssge"`
-* `git log`
-* `git diff` Para ver los cambios en la zona de archivos no preparados
-* `git diff --staged` Para ver los cambios en la zona de preparacion
-* `git reset HEAD Readme.md` Para quitar de la zona de preparación, tambien se puede usar `git restore --staged <file>`
-* `git commit --amend` Nos permite cambiar el mensaje del último commit que se hizo
+**Práctica** _Entendiendo el flujo de trabajo en Git pasando por las tres secciones_
 
 1. Para empezar crearemos una carpeta llamada Proyecto y accederemos a ella con la terminal e iniciaremos git con el comando `git init`
 2. Crearemos un archivo *Readme.md* y editaremos el archivo
 3. Escribimos `git status` y nos aparecera el archivo Readme como UNTRACKED
 4. Preparamos el archivo con `git add Readme.md`
-5. Para confirmar los cambios `git commit -m "(msg)Commit inicial"`
+5. Para confirmar los cambios `git commit -m "Commit inicial"`
 6. Para ver mis confirmaciones que hicimos usamos `git log`
 7. Volvemos a editar el archivo y para ver las diferencias con el archivo antiguo usamos `git diff`
 8. Estos son algunos comando básicos para entender el ciclo de vida de los estados, es muy importante tener claro esto
