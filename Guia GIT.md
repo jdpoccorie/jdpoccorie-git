@@ -2,34 +2,39 @@
 
 [Regresar](./README.md)
 
-# Introducción
+## Introducción
 
-> Es un Sistema de control de versiones para el mantenimiento eficiente y confiable de nuestros trabajos o proyectos... c:
+> Es un Sistema de control de versiones para el mantenimiento eficiente y confiable de nuestros trabajos o proyectos...
 
-## ¿Qué es?
+### ¿Qué es?
 
 * Es un sistema de control de versiones 
-* Es el mas usado en la actualidad 
 * El creador es Linus Torvalds
-* Git es gratuito y opensource
 * Git es usado en trabajos colaborativos
 
+**_Versión_** Conjunto de nuevas características y funcionalidades de un software disponibles para usuario final
 
-> Un **sistema de control de versiones** nos permite hacer un seguimiento de los cambios que apliquemos a nuestros proyectos, entonces a medida que vayamos haciendo cambios estas quedaran grabadas en nuestro repositorio. Asi, si cometimos algun error en un cambio podremos regresar al cambio anterior...
+> Un **sistema de control de versiones** es una herramienta para el manejo de las diferentes versiones del software.
 
-> Puedes emplearlo para casi cualquier tipo de archivo que encuentres en un ordenador. Si eres diseñador gráfico o web, y quieres mantener cada versión de una imagen o diseño (algo que sin duda quieres), un sistema de control de versiones (Version Control System o VCS en inglés) es una elección muy sabia.
+> Puedes emplearlo para casi cualquier tipo de archivo que encuentres en un ordenador.
 
-> Normalmente cuando nosotros tenemos un proyecto en desarrollo tenemos varias carpetas que funcionan o almacenan nuestros backup, esto resulta muy confuso a la hora de manejar nombres de carpetas... con Git solucionamos esto.
+### Conceptos previos
 
-**Git permite la creacion de ramas**
-* Esto ayuda a que algunas ramas esten en evolución, otras en desarrollo otras en finalización.
-* En estos aspectos las ramas ayudan a trabajar modularmente.
+* *Repositorio*.- depósito o archivo es un sitio centralizado donde se almacena y mantiene información digital, Para git este almacén es `.git` y si... este almacen es pesado.
 
-## Estructura
+### Estructura
 
-Git tiene tres estados principales en los que se pueden encontrar tus archivos: **confirmado (committed)**, **modificado (modified)**, y **preparado (staged)**. Confirmado significa que los datos están almacenados de manera segura en tu base de datos local. Modificado significa que has modificado el archivo pero todavía no lo has confirmado a tu base de datos. Preparado significa que has marcado un archivo modificado en su versión actual para que vaya en tu próxima confirmación.
+Git tiene tres estados principales en los que se pueden encontrar tus archivos: 
+* Confirmado (committed)
+* Modificado (modified)
+* Preparado (staged) 
 
-Esto nos lleva a las tres secciones principales de un proyecto de Git: el directorio de Git (Git directory), el directorio de trabajo (working directory), y el área de preparación (staging area).
+**Confirmado** significa que los datos están almacenados de manera segura en tu base de datos local. **Modificado** significa que has modificado el archivo pero todavía no lo has confirmado a tu base de datos. **Preparado** significa que has marcado un archivo modificado en su versión actual para que vaya en tu próxima confirmación.
+
+Esto nos lleva a las tres secciones principales de un proyecto de Git: 
+* el directorio de Git (Git directory), 
+* el directorio de trabajo (working directory), y 
+* el área de preparación (staging area).
 
 
 ![Directorio de trabajo, área de preparación, y directorio de Git](./img/Estados.png)
@@ -437,6 +442,8 @@ git tag <nombre-etiqueta> <escribir_hash-e7f52dc>
 Una rama en git es un apuntador móvil, se ira moviendo con las nuevas características que agreguemos. La rama master es un apuntador también ademas de ser la rama principal, las etiquetas tambien son unos apuntadores solo que estas permanecen estáticas 
 
 ![Apuntadores](./img/apuntadores.PNG)
+
+> En estos aspectos las ramas ayudan a trabajar modularmente.
 
 ### Dos ramas apuntando al mismo grupo de confirmaciones
 
