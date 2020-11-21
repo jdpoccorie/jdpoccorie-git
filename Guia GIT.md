@@ -692,117 +692,6 @@ Anteriormente manejamos una rama que vendria a ser master sobre esta nosotros cr
 5. Una vez estando en el master creamos un nuevo commit para ver que se hace en caso de conflicto...
 6. Listo!!
 
-## Parte VII
-### Tutorial de Git Repositorios Remotos
-
-Tendremos que crearnos un repositorio en github
-Despues tendremos que copiar la direccion https en el mio salio [GitHub jspoccorie](https://github.com/jdpoccorie/git.git)
-
-1. Nos ubicamos en la carpeta donde estan los qrchivos que vamos a subir desde el shell de github..
-2. inicializamos el git en esa carpeta
-3. testeamos poniendo git status
-4. Nos aparecera todos nuestros archivos en la carpeta
-5. Creamos el commit con todos ellos
-6. A vecer aparecera un warning que nos dira que el fin de linea de varios archivos van a ser remplazados por CRLF en vez de LF unicamente este warning mayormmente este error aparece en windows  pero se ignora nomas...
-7. usamos el commit git commit -m "Pruebita remota"
-8. Entonces ponemos git log y veremos nuestro commit
-9. Estos cambios solo se realizaron localmente por lo que para subir a github usaremos el git remote -v que nos dira a los repositorios remotos a los que estamos conectados ademas nos aparecera las url's
-10. para añadir un repositorio remoto usamos
-	git remote add ejemplito https://maslaurl.com
-11. verificamos si se crearon nuestros repositorios con git remote o con fit remote -v
-12. Veremos que nos aparece fetch y push que son los valores con los que podremos trabajar...
-13. El comando **fetch** nos va a permitir descargar cambios que sucedieron en el repositorio remoto para que veamos si hay cambios que no los tenemos sincronizados y el **push** nos va a permitir subir los archivos una vez que estemos perfectamente sincronizados... Entonces cada vez de que alguien quiera subir un archivo tendra que hacer primero un fetch para que este realmente sincronizado con los cambios anteriores y luego trecien podra subir sus cambios con push
-    
-14. Para subir los archivos tendremos que escribir en el shell:
-> git push ejemplito master
-
-15. Nos pedira nuestro usuario y contraseña del github y procedera a subir los archivos...
-16. Luego actualizamos nuestro repositorio de github
-17. Listo!!!
-
-
-### Para cambiar el nombre de un commit
-1. git commit --amend
-2. Se nos abrira un archivo en el editor en el cual nos aparecera el nombre del ultimo commit :)
-3. Editamos el nombre del commit
-4. Listo!!!
-
-### Renombrar Archivos
-commando para renombrar archivos
-
-* git mv
-* git mv file_from file_to
-
-1. ponemos en el shell git mv index.html pagina.html
-2. entramos en git status
-3. hacemos commit al al renamed c:
-4. Listo se cambio los archivos...
-
-### Regresar en el tiempo
-* git log --decorate --graph --all
-* git log --decorate --graph --all --oneline
-* Los anteriores comandos nos ayudan a ver la relacion de los commit
-
-1. Ponemos cualquiera de los anteriores para ver la lista de los commits
-2. escribir en el shell git checkout 2365ee5
-3. Nos damos cuenta de que nuestros archivos se actualizaron con los de esa vez en que creamos el commit, asi nosotros podemmos movernos a cualquier punto... Excelente!!
-4. Volvemos a master que en si nos regresara al HEAD :)
-
-
-### Trabajar con Etiquetas
-¿Como crear etiquetas en git? Buscar!
-
-Notas:
-* No es necesario estar en master para crear ramas y no es asi!!! ;v
-* Para moverse entre ramas se usa el 
-* git log --decorate --oneline --all --graph para ver en una linea los commmit
-* git log --decorate --all --graph Commits en nuestras ramas
-
-### Curso Git desde cero
-Sistema de control de versiones para el mantenimmiento eficiente y confiable de archivos
-
-### Zonas de git
-1. Directorio de trabajo
-2. Area de preparacion
-3. Directorio Git
-
-### Flujo de trabajo basico de git
-1. Modificas una serie de archivos en tu directorio de trabajo
-2. Preparas los archivos, añadiendolos a tu area de preparacion.
-3. Confirmas los cambios, los que toma los archivos tal y como estan en el area de preparacion y almacena esa copia instantanea de manera permanente en tu directorio git.
-
-### Configurando git por primera vez
-git config --global user.name "Juan Diego"
-git config --global user.email "juandiego.poccori@gmail.com"
-git config --global core.editor ...
-git config --list
-
-### git branch
-Una rama en git es simplemente un apuntador movil apuntando a una de los commits
-Puedo crear todas las ramas que quiera y/o necesite.
-Las ramas nuevas se crean apuntando al commits actual donde esta ubicado el HEAD.
-
-### git commit --amend
-Este comando utiliza el area de preparacion para la confirmacion.
-Al final terminaras con una sola confirmación - la segunda confirmacion reemplaza el resultado de la primera.
-
-Si no hemos hecho cambios desde la ultima confirmacion entonces la instantanea (commit) lucira exactamente igual y lo unico que cambiaremos sera el mensaje del commit
-
-### git commit -a -m "mensaje del commit" || git commit -am "mensaje del commit"
-Con este commando podemos saltar el area de preparacion osea que ya no ponemos el git add -A :)
-
-### Fusionar ramas
-### git branch
-Una rama en Git es simplemente un apuntador movil apuntando a una de los commits
-
-### git branch --no-merged
-Nos muestra cuales ramas no han sido fusionadas a la rama actual
-
-### git branch --merged
-Nos muestra las ramas que han sido fusionadas a la rama actual
-
-Un conflicto nos dice que dos ramas modificaron la misma linea 
-
 ## GitHub
 
 * Creamos un nuevo repositorio en https://github.com/new
@@ -866,7 +755,7 @@ Podemos configurar un mismo proyecto para sincronizar varios repositorios remoto
 
 ## Configuracion SSH - GitHub
 
-1. Creamos una carpeta en el dico C: `\llaves--ssh`
+1. Creamos una carpeta en el dico C: `\llaves-ssh`
 2. En consola, OJO: El correo debe de ser el mismo con el que nos registramos en Github,
 ```
 $ ssh-keygen -t rsa -C "juandiego.poccori@gmail.com"
