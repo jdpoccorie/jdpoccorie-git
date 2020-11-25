@@ -136,7 +136,7 @@ Puede que te estés preguntando la diferencia entre autor (author) y confirmador
 
 ## Deshaciendo cosas
 
-* `git commit --ammend` Nos permite sobreescribir nuestra ultima confirmación, puede ser solo el mensaje o toda una confirmacion con archivos y nuevas lineas agregadas
+* `git commit --amend` Nos permite sobreescribir nuestra ultima confirmación, puede ser solo el mensaje o toda una confirmacion con archivos y nuevas lineas agregadas
 * `git reset HEAD <file>` Para deshacer la preparación de un archivo
 * `git restore --staged <file>` Para deshacer la preparación de un archivo
 * `git checkout -- <file>` Nos permite deshacer los cambios que le hicimos al archivo
