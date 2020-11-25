@@ -177,6 +177,7 @@ Puede que te estés preguntando la diferencia entre autor (author) y confirmador
 * `git branch <nombre_rama>` Para crear una rama
 * `git branch -b <nombre_rama>` Nos permite crear la rama y saltar a ella en un solo comando, nos ahorra el **git checkout**
 * `git checkout <nombre_rama>` Para cambiar la rama en donde estemos
+* `git switch <nombre_rama>` A partir de v2.23. Para cambiar la rama a *nombre_rama*
 * `git branch -v` Nos muestra todas las ramas y su ultimo commit que se hizo en cada una de ellas
 * `git branch --all` Para ver todas las ramas incluidas las del repositorio remoto
 
