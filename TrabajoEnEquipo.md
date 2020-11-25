@@ -10,3 +10,8 @@
 * Una vez creada la organización, crearemos un nuevo repositorio
 
 ![Creando Repositorio](./img/organization.PNG)
+
+## Agregando a gente al repositorio
+
+Para eso nos dirigimos al apartado de *People* y lo que tenemos que hacer es invitarlos, podemos gestionar sus permisos tambien.
+
