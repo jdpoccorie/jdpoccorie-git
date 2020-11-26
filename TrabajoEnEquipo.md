@@ -22,3 +22,21 @@ Cuando estemos trabajando en un repositorio colaborativo los recomendable es que
 > **FORK** es una bifurcación, se entiende que de una rama pricipal se generarán nuevas ramas independientes(copias) a esta.
 
 ![Fork](./img/fork.png)
+
+## Creando repositorios remotos
+
+El administrador del repositorio principal tendra que decidir la forma de trabajo es deci la distriución de las ramas. Un ejemlo sería tener dos ramas, una `dev` y otra la principal(`master`).
+
+Esta distribución indicará a los integrantes del proyecto que suban todos sus cambios a la rama `dev` y que cuando esten desactualizados del proyecto hagan un pull a esa misma rama. 
+
+Entonces los integrantes en su copia(fork) tendrán que agregar repositorios remotos del proyecto principal y de su proyecto personal. Es decir
+```
+$ git remote -v
+organizacion git@github.com:cuscowebdev/jdpoccorieGit.git
+organizacion git@github.com:cuscowebdev/jdpoccorieGit.git
+personal(origin) git@github.com:jdpoccorie/jdpoccorieGit.git
+personal(origin) git@github.com:jdpoccorie/jdpoccorieGit.git
+```
+
+> Es una buena práctica que los integrantes no suban cambios directamente a la rama master del repositorio principal
+
