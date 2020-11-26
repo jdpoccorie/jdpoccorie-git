@@ -144,7 +144,7 @@ Puede que te estés preguntando la diferencia entre autor (author) y confirmador
 * `git checkout -f` Nos permite forzar para deshacer los cambios que hicimos a todos los archivos
 * `git restore <file>` Nos permite deshacer los cambios que le hicimos al archivo
 
-## Etiquetas
+## Etiquetas (releases)
 
 * `git tag` o `git tag --list` Listas todas las etiquetas del proyecto
 * `git tag -l "v1.4.2.*"` Listar etiquetas de acuerdo a un patrón
@@ -154,6 +154,7 @@ Puede que te estés preguntando la diferencia entre autor (author) y confirmador
 * `git checkout <tag>`
 * `git checkout --decorate --online --all` Para mostrar todos los commit estando el HEAD en cualquier punto
 * `git tag -g <etiqueta>` Elimina la etiqueta
+* `git push origin --tags` Publica las etiquetas de local al repositorio remoto
 
 ## Clonacion de repositorios
 
@@ -225,6 +226,14 @@ CAMBIOS EN <nombre_rama>
 El archivo sera modificado por el both del repositorio de git y nosotros tendremos que solucionar el conflicto manualmente escogiendo que lineas salvar y que otras eliminar. VSCode nos ayuda bastante con esto, podemos modificar cualquier otra parte del documento.
 
 Una vez solucionado el conflicto podremos hacer el **commit** como siempre
+
+## Git stash (WIP) Work in process
+
+* `git stash` Nos permite guardar en memoria un cambio incompleto que tengamos
+* `git stash list` Nos muestra la lista de los stash que hicimos
+* `git stash pop` Recupera de memoria los cambios que guardamos
+
+> Este comando nos ayuda cuando por ejemplo queremos revisar otras ramas pero la rama que estabamos trabajando esta incompleta, entonces lo que tendriamos que hacer es guardar los cambios incompletos en memoria con `git stash` y después recien navegar por las otras ramas.
 
 ## GitHub
 
