@@ -79,3 +79,5 @@ Y finalmente para recuperar lo guardado ejecutamos `git stash pop`
 12. Se aprueba o se rechaza el Pull request
 13. Cada colaborador debe revisar constantemente(fetch) si no hubo cambios en el proyecto original
 14. Se debe eliminar las ramas que ya fueron aprobadas/rechazadas
+
+> Todos estos pasos podemos hacerlo desde @gitlab o @bitbucket, etc.
