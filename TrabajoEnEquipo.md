@@ -21,7 +21,7 @@ Cuando estemos trabajando en un repositorio colaborativo los recomendable es que
 
 > **FORK** es una bifurcación, se entiende que de una rama pricipal se generarán nuevas ramas independientes(copias) a esta.
 
-![Fork](./img/fork.png)
+![Fork](./img/fork.PNG)
 
 ## Creando repositorios remotos
 
